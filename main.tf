@@ -42,7 +42,6 @@ resource "aws_ebs_volume" "firstvol" {
 resource "aws_elb" "myfirstinstanceelb" {
   name               = "myfirstinstanceelb-terraform"
   availability_zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
-  subnets = var.subnetid
 
   listener {
     instance_port     = 80
