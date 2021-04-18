@@ -36,7 +36,7 @@ resource "aws_volume_attachment" "ebs_att" {
 }
 resource "aws_ebs_volume" "firstvol" {
   availability_zone = "us-east-1a"
-  size              = 5
+  size              = 10
 }
 
 # Create Security Group for EC2
