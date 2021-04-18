@@ -41,8 +41,8 @@ resource "aws_ebs_volume" "firstvol" {
 
 resource "aws_elb" "myfirstinstanceelb" {
   name               = "myfirstinstanceelb-terraform"
-  availability_zones = "us-east-1a"
-    subnets         = "subnet-07ef0ec79444557b8"
+  availability_zones = ["us-east-1a","us-east-1b"]
+    subnets         = ["subnet-07ef0ec79444557b8","subnet-060772055a466b594"]
   internal        = true
 
   listener {
