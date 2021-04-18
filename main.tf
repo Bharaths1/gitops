@@ -32,7 +32,7 @@ resource "aws_instance" "default" {
 resource "aws_volume_attachment" "ebs_att" {
   device_name = "/dev/sdh"
   volume_id   = aws_ebs_volume.firstvol.id
-  instance_id = aws_instance.default.id
+  instance_id = aws_instance.default.[count.index]]
 }
 
 resource "aws_ebs_volume" "firstvol" {
