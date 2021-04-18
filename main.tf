@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 # Create EC2 instance
-resource "aws_instance" "default" {
+resource "aws_instance" "myfirstinstance" {
   ami                    = var.ami
   count                  = var.instance_count
   key_name               = var.key_name
@@ -32,9 +32,8 @@ resource "aws_instance" "default" {
 resource "aws_volume_attachment" "ebs_att" {
   device_name = "/dev/sdh"
   volume_id   = aws_ebs_volume.firstvol.id
-  instance_id = ["${aws_instance.default.id}"]
+  instance_id = aws_instance.myfirstinstance.id
 }
-
 resource "aws_ebs_volume" "firstvol" {
   availability_zone = "us-east-1b"
   size              = 5
