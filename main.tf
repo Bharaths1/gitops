@@ -2,7 +2,7 @@
 terraform {
   backend "s3" {
     bucket = "terraform-bucket-cloud"
-    key    = "terraform.tfstate"
+    key    = "terraform-attachemnt.tfstate"
     region = "us-east-1"
     profile = "terraform-master1"
   }
