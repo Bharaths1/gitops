@@ -35,7 +35,7 @@ resource "aws_volume_attachment" "ebs_att" {
   instance_id = aws_instance.myfirstinstance[0].id
 }
 resource "aws_ebs_volume" "firstvol" {
-  availability_zone = "us-east-1b"
+  availability_zone = "us-east-1a"
   size              = 5
 }
 
